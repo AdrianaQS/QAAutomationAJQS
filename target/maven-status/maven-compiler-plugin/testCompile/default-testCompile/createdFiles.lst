@@ -1,0 +1,3 @@
+CucumberTestSuite.class
+glue\GestionUsuarioStepDef.class
+steps\GestionUsuarioStep.class
