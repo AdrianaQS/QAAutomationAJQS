@@ -1,54 +1,29 @@
 package com.nttdata.steps;
 
-import com.nttdata.page.CatalogoProductosPage;
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
+import com.nttdata.screens.CatalogoProductosScreen;
+import net.thucydides.core.annotations.Step;
 
 public class CatalogoProductosSteps {
-    private WebDriver driver;
 
-    public CatalogoProductosSteps(WebDriver driver){
+    CatalogoProductosScreen catalogoProductosScreen;
 
-        this.driver = driver;
+    @Step("Valida titulo")
+    public void validarTitulo() {
+        catalogoProductosScreen.validarTitulo();
     }
 
-    public void NavegarCategoria(String categoria) {
-        List<WebElement> categorias = this.driver.findElements(CatalogoProductosPage.categoria);
-        boolean categoriaEncontrada = false;
-
-        for (WebElement cat : categorias) {
-            String categoriaTexto = cat.getText();
-
-            if (categoriaTexto.equalsIgnoreCase(categoria)) {
-                cat.click();
-                categoriaEncontrada = true;
-                break;
-            }
-        }
-
-        Assert.assertTrue("Categoría '" + categoria + "' no encontrada.", categoriaEncontrada);
+    @Step("Valida que el logo es visible")
+    public void LogoisVisible() {
+        catalogoProductosScreen.LogoisVisible();
     }
 
-    public void Navegarsubcategoria(String subcategoria) {
-        List<WebElement> subcategorias = this.driver.findElements(CatalogoProductosPage.subCategoria);
-
-
-        for (WebElement subCat : subcategorias) {
-            String subcategoriaTexto = subCat.getText();
-
-
-            if (subcategoriaTexto.equalsIgnoreCase(subcategoria)) {
-                subCat.click();
-                break;
-            }
-        }
+    @Step("Valida que la lista de productos")
+    public void ProductosCargados() {
+        catalogoProductosScreen.ProductosCargados();
     }
 
-    public void escogerProducto() {
-        this.driver.findElement(CatalogoProductosPage.producto).click();
+    @Step("Selecciono el producto {string}")
+    public void SeleccionoProducto(String nameProduct) {
+        catalogoProductosScreen.SeleccionoProducto(nameProduct);
     }
-
 }

@@ -1,32 +1,26 @@
 package com.nttdata.steps;
 
-import com.nttdata.page.VistaProducto;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.nttdata.screens.VistaProductoScreen;
+import net.thucydides.core.annotations.Step;
 
 public class VistaProductoSteps {
-    private WebDriver driver;
 
-    public VistaProductoSteps(WebDriver driver){
+   VistaProductoScreen vistaProductoScreen;
 
-        this.driver = driver;
+    @Step("Agrego unidades del producto {int}")
+    public void agregoUnidades(int cant) {
+
+        vistaProductoScreen.AgregoUnidades(cant);
     }
 
-    public void AgregarCarrito(int cant) {
-        WebElement CantInput = this.driver.findElement(VistaProducto.CantInput);
+    @Step("Selecciono el boton Agregar al Carro")
+    public void AddCart() {
 
-        CantInput.clear();
-        CantInput.sendKeys(Keys.DELETE);
+        vistaProductoScreen.AddCart();
+    }
 
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        CantInput.sendKeys(String.valueOf(cant));
-
-        this.driver.findElement(VistaProducto.CarritoButton).click();
+    @Step("Valido el Item Cart coincida con la Cant de productos")
+    public void validoProductoAgregado() {
+        vistaProductoScreen.ValidoItemCart();
     }
 }

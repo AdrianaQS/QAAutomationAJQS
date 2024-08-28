@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="2" name="Validar Funcionalidad Carrito" skipped="0" tests="4" time="110.56" timestamp="2024-08-28 03:33:55"><testcase name="Agregar Productos al Carrito"><error message="El producto con el nombre 'Sauce Labs Bolt - T-Shirt' no fue encontrado." type="java.lang.AssertionError">El producto con el nombre 'Sauce Labs Bolt - T-Shirt' no fue encontrado.</error><system-err>El producto con el nombre 'Sauce Labs Bolt - T-Shirt' no fue encontrado.&#13;
+com.nttdata.screens.CatalogoProductosScreen.SeleccionoProducto(CatalogoProductosScreen.java:57)&#13;
+com.nttdata.steps.CatalogoProductosSteps.SeleccionoProducto(CatalogoProductosSteps.java:27)&#13;
+com.nttdata.stepsdefinitions.MyDemoAppStepsDef.seleccionoElSiguienteProducto(MyDemoAppStepsDef.java:31)&#13;
+✽.selecciono el siguiente producto "Sauce Labs Bolt - T-Shirt"(file:///D:/CLASES/NTTDATA%20QA/Remotos/QAAutomationAJQS/src/test/resources/features/MyDemo.feature:7)&#13;
+</system-err></testcase></testsuite>

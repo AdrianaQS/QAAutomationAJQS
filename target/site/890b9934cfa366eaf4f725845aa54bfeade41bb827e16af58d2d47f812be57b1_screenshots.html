@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity QA Innovation Lab Mobile</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="1dcac3d769d413f142767fbe873e2ee333daafcbd57034aa398f3842d26957a8.html">Validar Funcionalidad Carrito</a></span>
+                > <span class="truncate-60"><a
+                    href="890b9934cfa366eaf4f725845aa54bfeade41bb827e16af58d2d47f812be57b1.html">Agregar Productos al Carrito </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-08-2024 03:39</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Validar Funcionalidad Carrito </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="ec2f54de38f6fb0ed281dc349fd157246e60ae467ccb3939a4b6443a135fd3b8.html">Test Carrito
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Agregar Productos al Carrito
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given estoy en la aplicación de SauceLabs<br>And valido que carguen correctamente los productos en la galeria<br>When selecciono el siguiente producto "&lt;PRODUCTO&gt;"<br>And agrego &lt;UNIDADES&gt; del producto<br>Then valido el carrito de compra actualice correctamente</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: El producto con el nombre 'Sauce Labs Bolt - T-Shirt' no fue encontrado.</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.nttdata.screens.CatalogoProductosScreen.SeleccionoProducto(CatalogoProductosScreen.java:57)<br />com.nttdata.steps.CatalogoProductosSteps.SeleccionoProducto(CatalogoProductosSteps.java:27)<br />com.nttdata.stepsdefinitions.MyDemoAppStepsDef.seleccionoElSiguienteProducto(MyDemoAppStepsDef.java:31)<br />✽.selecciono el siguiente producto "Sauce Labs Bolt - T-Shirt"(file:///D:/CLASES/NTTDATA%20QA/Remotos/QAAutomationAJQS/src/test/resources/features/MyDemo.feature:7)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource26859185398988373.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="896a4857cf89db826d1b6aac0a83a02a04b5b2775c42bb8d8bfef422a93e73ec.png" title=" 1: Agregar Productos al Carrito ({PRODUCTO=Sauce Labs Backpack, UNIDADES=1})" width="1080"/>
+                <img src="896a4857cf89db826d1b6aac0a83a02a04b5b2775c42bb8d8bfef422a93e73ec.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs" width="1080"/>
+                <img src="896a4857cf89db826d1b6aac0a83a02a04b5b2775c42bb8d8bfef422a93e73ec.png" title=" Valida titulo" width="1080"/>
+                <img src="896a4857cf89db826d1b6aac0a83a02a04b5b2775c42bb8d8bfef422a93e73ec.png" title=" Valida que el logo es visible" width="1080"/>
+                <img src="896a4857cf89db826d1b6aac0a83a02a04b5b2775c42bb8d8bfef422a93e73ec.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs (completed)" width="1080"/>
+                <img src="effdfba78a69b7f2ec0958e7494eb3e03522eb650c6d64381d179392382b8a46.png" title=" And valido que carguen correctamente los productos en la galeria" width="1080"/>
+                <img src="effdfba78a69b7f2ec0958e7494eb3e03522eb650c6d64381d179392382b8a46.png" title=" Valida que la lista de productos" width="1080"/>
+                <img src="effdfba78a69b7f2ec0958e7494eb3e03522eb650c6d64381d179392382b8a46.png" title=" And valido que carguen correctamente los productos en la galeria (completed)" width="1080"/>
+                <img src="effdfba78a69b7f2ec0958e7494eb3e03522eb650c6d64381d179392382b8a46.png" title=" When selecciono el siguiente producto &quot;Sauce Labs Backpack&quot;" width="1080"/>
+                <img src="effdfba78a69b7f2ec0958e7494eb3e03522eb650c6d64381d179392382b8a46.png" title=" Selecciono el producto {string}" width="1080"/>
+                <img src="effdfba78a69b7f2ec0958e7494eb3e03522eb650c6d64381d179392382b8a46.png" title=" When selecciono el siguiente producto &quot;Sauce Labs Backpack&quot; (completed)" width="1080"/>
+                <img src="31609c2dd04b434aadfb8fd95cc103e24b7164bcc58a8789f9195ac63d2f5a33.png" title=" And agrego 1 del producto" width="1080"/>
+                <img src="31609c2dd04b434aadfb8fd95cc103e24b7164bcc58a8789f9195ac63d2f5a33.png" title=" Agrego unidades del producto {int}" width="1080"/>
+                <img src="80c77012553f38c3f77096cc667f001019458ba5a91cfa126d47226e2fba74cd.png" title=" Selecciono el boton Agregar al Carro" width="1080"/>
+                <img src="80c77012553f38c3f77096cc667f001019458ba5a91cfa126d47226e2fba74cd.png" title=" And agrego 1 del producto (completed)" width="1080"/>
+                <img src="297c5f5b5233db33b6e14a77905c8ee60abe6743ef6d76a5b012e5f9c32b3b6b.png" title=" Then valido el carrito de compra actualice correctamente" width="1080"/>
+                <img src="297c5f5b5233db33b6e14a77905c8ee60abe6743ef6d76a5b012e5f9c32b3b6b.png" title=" Valido el Item Cart coincida con la Cant de productos" width="1080"/>
+                <img src="297c5f5b5233db33b6e14a77905c8ee60abe6743ef6d76a5b012e5f9c32b3b6b.png" title=" Then valido el carrito de compra actualice correctamente (completed)" width="1080"/>
+                <img src="297c5f5b5233db33b6e14a77905c8ee60abe6743ef6d76a5b012e5f9c32b3b6b.png" title=" 1: Agregar Productos al Carrito ({PRODUCTO=Sauce Labs Backpack, UNIDADES=1}) (completed)" width="1080"/>
+                <img src="896a4857cf89db826d1b6aac0a83a02a04b5b2775c42bb8d8bfef422a93e73ec.png" title=" 2: Agregar Productos al Carrito ({PRODUCTO=Sauce Labs Bolt - T-Shirt, UNIDADES=1})" width="1080"/>
+                <img src="896a4857cf89db826d1b6aac0a83a02a04b5b2775c42bb8d8bfef422a93e73ec.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs" width="1080"/>
+                <img src="896a4857cf89db826d1b6aac0a83a02a04b5b2775c42bb8d8bfef422a93e73ec.png" title=" Valida titulo" width="1080"/>
+                <img src="bfba1073c5bb87b04f63ec99e8870ec6c6fce52ac656b559b4680f47e60993c6.png" title=" Valida que el logo es visible" width="1080"/>
+                <img src="bfba1073c5bb87b04f63ec99e8870ec6c6fce52ac656b559b4680f47e60993c6.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs (completed)" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" And valido que carguen correctamente los productos en la galeria" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" Valida que la lista de productos" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" And valido que carguen correctamente los productos en la galeria (completed)" width="1080"/>
+                <img src="0ddc96926c65c592f350abe17056a9dd244ff83c5c485593cdd068f54ea860c6.png" title=" When selecciono el siguiente producto &quot;Sauce Labs Bolt - T-Shirt&quot;" width="1080"/>
+                <img src="0ddc96926c65c592f350abe17056a9dd244ff83c5c485593cdd068f54ea860c6.png" title=" Selecciono el producto {string}" width="1080"/>
+                <img src="c4eb3145311962bc698a2bf08d9479d3e92d545e28138212aa9c389791dbac87.png" title=" 3: Agregar Productos al Carrito ({PRODUCTO=Sauce Labs Fleece Jacket, UNIDADES=3})" width="1080"/>
+                <img src="c4eb3145311962bc698a2bf08d9479d3e92d545e28138212aa9c389791dbac87.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs" width="1080"/>
+                <img src="c4eb3145311962bc698a2bf08d9479d3e92d545e28138212aa9c389791dbac87.png" title=" Valida titulo" width="1080"/>
+                <img src="fad7d481c444132c3acc528b864e7ae0beb8e1e02cff910c9851d52a06846e86.png" title=" Valida que el logo es visible" width="1080"/>
+                <img src="fad7d481c444132c3acc528b864e7ae0beb8e1e02cff910c9851d52a06846e86.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs (completed)" width="1080"/>
+                <img src="fad7d481c444132c3acc528b864e7ae0beb8e1e02cff910c9851d52a06846e86.png" title=" And valido que carguen correctamente los productos en la galeria" width="1080"/>
+                <img src="fad7d481c444132c3acc528b864e7ae0beb8e1e02cff910c9851d52a06846e86.png" title=" Valida que la lista de productos" width="1080"/>
+                <img src="fad7d481c444132c3acc528b864e7ae0beb8e1e02cff910c9851d52a06846e86.png" title=" And valido que carguen correctamente los productos en la galeria (completed)" width="1080"/>
+                <img src="0ddc96926c65c592f350abe17056a9dd244ff83c5c485593cdd068f54ea860c6.png" title=" When selecciono el siguiente producto &quot;Sauce Labs Fleece Jacket&quot;" width="1080"/>
+                <img src="0ddc96926c65c592f350abe17056a9dd244ff83c5c485593cdd068f54ea860c6.png" title=" Selecciono el producto {string}" width="1080"/>
+                <img src="0ddc96926c65c592f350abe17056a9dd244ff83c5c485593cdd068f54ea860c6.png" title=" When selecciono el siguiente producto &quot;Sauce Labs Fleece Jacket&quot; (completed)" width="1080"/>
+                <img src="1f3d2906b422396221772ad6b7ce276682eca4f3fbb9aa22ff139bef1b02baea.png" title=" And agrego 3 del producto" width="1080"/>
+                <img src="1f3d2906b422396221772ad6b7ce276682eca4f3fbb9aa22ff139bef1b02baea.png" title=" Agrego unidades del producto {int}" width="1080"/>
+                <img src="60bbe8cd647dec79542edb44ffe338ea52418aa7a69d02dd57b3e1969b4cf3ee.png" title=" Selecciono el boton Agregar al Carro" width="1080"/>
+                <img src="60bbe8cd647dec79542edb44ffe338ea52418aa7a69d02dd57b3e1969b4cf3ee.png" title=" And agrego 3 del producto (completed)" width="1080"/>
+                <img src="b87d694aca29c8500ad43dd9ac721bce5ebc40faf738ae739bb5be339a657df4.png" title=" Then valido el carrito de compra actualice correctamente" width="1080"/>
+                <img src="b87d694aca29c8500ad43dd9ac721bce5ebc40faf738ae739bb5be339a657df4.png" title=" Valido el Item Cart coincida con la Cant de productos" width="1080"/>
+                <img src="b87d694aca29c8500ad43dd9ac721bce5ebc40faf738ae739bb5be339a657df4.png" title=" Then valido el carrito de compra actualice correctamente (completed)" width="1080"/>
+                <img src="b87d694aca29c8500ad43dd9ac721bce5ebc40faf738ae739bb5be339a657df4.png" title=" 3: Agregar Productos al Carrito ({PRODUCTO=Sauce Labs Fleece Jacket, UNIDADES=3}) (completed)" width="1080"/>
+                <img src="c4eb3145311962bc698a2bf08d9479d3e92d545e28138212aa9c389791dbac87.png" title=" 4: Agregar Productos al Carrito ({PRODUCTO=Sauce Labs Bike Light, UNIDADES=2})" width="1080"/>
+                <img src="c4eb3145311962bc698a2bf08d9479d3e92d545e28138212aa9c389791dbac87.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs" width="1080"/>
+                <img src="c4eb3145311962bc698a2bf08d9479d3e92d545e28138212aa9c389791dbac87.png" title=" Valida titulo" width="1080"/>
+                <img src="c4eb3145311962bc698a2bf08d9479d3e92d545e28138212aa9c389791dbac87.png" title=" Valida que el logo es visible" width="1080"/>
+                <img src="c4eb3145311962bc698a2bf08d9479d3e92d545e28138212aa9c389791dbac87.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs (completed)" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" And valido que carguen correctamente los productos en la galeria" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" Valida que la lista de productos" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" And valido que carguen correctamente los productos en la galeria (completed)" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" When selecciono el siguiente producto &quot;Sauce Labs Bike Light&quot;" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" Selecciono el producto {string}" width="1080"/>
+                <img src="b35339a453c9ed116cc8c0f1dc114fd53927e9721a4808be32c4f5f970790825.png" title=" When selecciono el siguiente producto &quot;Sauce Labs Bike Light&quot; (completed)" width="1080"/>
+                <img src="6be6942d738b871e8b6576f90b9b5e3397d17a2c0a54792f2c8378e574354065.png" title=" And agrego 2 del producto" width="1080"/>
+                <img src="6be6942d738b871e8b6576f90b9b5e3397d17a2c0a54792f2c8378e574354065.png" title=" Agrego unidades del producto {int}: <span class='error-color'>ERROR</span>" width="1080"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.4.51</span>
+</div>
+</body>
+</html>
